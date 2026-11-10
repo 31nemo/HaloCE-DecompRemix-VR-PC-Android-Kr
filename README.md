@@ -1,74 +1,69 @@
-<p align="center"><img src=".github/decomplogo.png" alt="Halo Combat Evolved VR — OpenCE port" width="460" /></p>
+# Halo CE Decomp Remix — 한국판 디스크 지원 (비공식 한국어 패치)
 
-<h1 align="center">Halo CE Decomp Remix — VR, PC & Android</h1>
+[moistman42069/HaloCE-DecompRemix-VR-PC-Android](https://github.com/moistman42069/HaloCE-DecompRemix-VR-PC-Android)
+**v1.0.41** 에 한국판 Xbox 디스크 *Halo - Jeonjaengui Seomak (Korea) (En,Ko)* (헤일로: 전쟁의 서막) 지원을 더한 버전입니다.
+한국판 디스크의 **한국어 음성과 한국어 글자(HUD·자막·미션 목표 등)** 로 플레이할 수 있습니다.
 
-<p align="center">An unofficial OpenCE-based community port for Meta Quest, PICO and Steam Frame VR, Windows flat PC and PC VR, and flat Android phones and tablets.</p>
+원작자와 무관한 비공식 수정본이며, Microsoft와도 관계가 없습니다. 게임 파일은 들어 있지 않습니다. 각자 가진 디스크 이미지를 씁니다.
 
-> **이 저장소는 한국판 디스크(헤일로: 전쟁의 서막) 지원판입니다 — [KOREAN.md](KOREAN.md).** Unofficial fork of v1.0.41 adding support for the Korean Xbox disc; see KOREAN.md. Not the original project.
+## 설치
 
-**Latest: [1.0.41 — Test73b Multi-Platform Release](https://github.com/moistman42069/HaloCE-DecompRemix-VR-PC-Android/releases/tag/v1.0.41).** This is a large cumulative update from 1.0.37. Read the install and WIP notes before playing.
+[Releases](../../releases) 에서 기기에 맞는 APK를 받습니다.
 
-> **Experimental / WIP:** fist combat and projectile deflection, sliding, parkour, physical reload, ragdolls and body interactions, immersive vehicle controls, and broad support for user-supplied mods still need refinement and device reports. Enable experimental options one at a time. Project Lumoria and SPV1 have specific setup paths; this does not mean every mod works. MCC maps and The Altheros Experience remain experimental.
+| 파일 | 기기 |
+|---|---|
+| `HaloCE-Quest-1.0.41-kr1.apk` | Meta Quest (VR) |
+| `HaloCE-Android-1.0.41-kr1.apk` | 안드로이드 폰·태블릿 |
 
-## Downloads
+1. **원본 앱이 설치되어 있으면 먼저 지웁니다.** 서명이 달라서 덮어쓸 수 없습니다.
+   지우면 그 앱에 가져온 맵과 세이브도 지워지니 필요하면 먼저 백업하세요.
+2. APK를 설치합니다 (Quest: SideQuest 또는 `adb install`).
+3. 실행해서 **한국판 디스크 이미지(ISO/XISO)** 를 고릅니다.
+   맵을 꺼낸 뒤 "Korean fonts: … (N of M MB)" 단계가 몇 분 동안 이어집니다. 끝까지 기다리세요.
 
-| Platform | Download |
-| --- | --- |
-| Android phone/tablet — flat | [HaloCE-Android-1.0.41.apk](https://github.com/moistman42069/HaloCE-DecompRemix-VR-PC-Android/releases/download/v1.0.41/HaloCE-Android-1.0.41.apk) |
-| Meta Quest — standalone VR | [HaloCE-Quest-1.0.41.apk](https://github.com/moistman42069/HaloCE-DecompRemix-VR-PC-Android/releases/download/v1.0.41/HaloCE-Quest-1.0.41.apk) |
-| PICO — standalone VR | [Universal VR APK](https://github.com/moistman42069/HaloCE-DecompRemix-VR-PC-Android/releases/download/v1.0.41/HaloCE-Quest-1.0.41.apk) |
-| Windows — flat PC and PC VR | [HaloCE-Windows-1.0.41.zip](https://github.com/moistman42069/HaloCE-DecompRemix-VR-PC-Android/releases/download/v1.0.41/HaloCE-Windows-1.0.41.zip) |
-| Steam Frame — installer bundle | [HaloCE-SteamFrame-1.0.41.zip](https://github.com/moistman42069/HaloCE-DecompRemix-VR-PC-Android/releases/download/v1.0.41/HaloCE-SteamFrame-1.0.41.zip) |
+미국판 디스크도 그대로 쓸 수 있습니다 (원본과 같이 동작).
 
-See the [complete release notes](https://github.com/moistman42069/HaloCE-DecompRemix-VR-PC-Android/blob/main/docs/RELEASE-1.0.41.md) for separate install instructions. Existing Android/VR users should install over the old app; **do not uninstall or clear app data** to preserve saves, settings and imported files. APK identity is 1.0.41-test73b / code 86. The app contains no Halo game data. The original Xbox XISO remains the recommended baseline.
+## 한국어로 나오는 것 / 영어로 남는 것
 
-## Highlights and compatibility
+- 한국어: 음성, HUD 안내, 자막, 미션 목표 등 **게임 맵에서 나오는 글자와 소리**, 원래 Xbox 화면의 그림 제목
+- 영어: 메인 메뉴·LOAD LEVEL·설정처럼 **이 포트가 새로 만든 메뉴** (원본 포트의 영어 문구)
+- 글자는 맵의 원래 그림 폰트로 그립니다 (고해상도 글자 기본 끔). 그래서 원본보다 조금 흐릴 수 있습니다.
 
-- **VR third person:** an over-the-shoulder camera for on-foot campaign and co-op, under VR Settings → Gameplay → Third Person. Physical hand interactions suspend while active and restore on exit. PvP is excluded. This exact build still needs headset validation.
-- **VR body and shadows:** the player body casts a shadow; stencil shadows were restored to the HALOFREAK95/OpenCE-fork behavior.
-- **Controllers and menus:** B returns from menus on all controllers; A/B/X/Y keep their labelled actions. A CONTROLS page is in each launcher.
-- **Movement:** VR Sprint Toggle is the default, Bullet Time works across supported controllers, Android touch has a Sprint button, and Windows flat uses Left Shift.
-- **World Scale:** VR Settings → Comfort, adjustable from 70% to 150%.
-- **Map sharing:** default upload limits are 20 MB/s for hosts and 10 MB/s for helpers; lower Server Setup → Map Sharing → Upload Limit if the host connection saturates.
-- **Held bodies:** a corpse stays visible where held when used as a shield.
-- **Logs:** Windows launcher LOGS page; Windows and Steam Frame retain ten runs.
-- **Included platforms:** standalone VR on Quest/PICO/Steam Frame, flat Android, Windows flat PC and PC VR, plus the Steam Frame installer.
-- **Networking:** OpenCE Build 256/network 34, joining compatible network versions 11–34, in-game server browser, campaign hosting/co-op, voice and map sharing. Co-op supports ordinary campaign play; very high player counts are not validated.
+## 바뀐 점 (원본 v1.0.41 대비, 2026-11-11)
 
-Fist combat/deflection, sliding, parkour, manual reload, physical grenades, ragdolls/body interaction, immersive vehicles and broad mod support remain experimental/WIP. Reports for PC graphics settings, post-Flood camera behavior, a possible Wrist HUD report and The Maw bridge countdown need session logs.
+| 문제 | 원인 | 수정 |
+|---|---|---|
+| 한국판 디스크를 거부 | 맵 빌드 `01.12.09.0135` 가 지원 목록에 없음 | 런처 `MapInfo.java`, 엔진 `cache_files.c` 빌드 표에 추가 (엔진 표에서는 `01.08.15.1749` 자리를 대신함) |
+| 영어 맵(`maps/`)을 가져옴 | 디스크에 `maps/` 와 `maps_kr/` 가 같이 있음 | `XisoExtractor.java`: `maps_kr` 우선 |
+| "a structure bsp is damaged" 로 멈춤 | 한국판 실행 파일의 태그 캐시가 더 큼 (`0x167D000`) | `TAG_CACHE_SIZE` `0x1600000` → `0x1680000` |
+| 시작하자마자 꺼짐 (`cseries.c #279`) | 늘린 태그 캐시가 게임 상태 메모리와 겹침 | `HALO_PORT_GAME_STATE_BASE_ADDRESS` `0x81A00000` → `0x81B00000` |
+| 글자가 하나도 안 나옴 | 한국판 폰트(`ui\large_ui`, `ui\small_ui`)는 문자표가 비어 있고, 한글 코드 = 글자 번호 + `0xA1` (한국판 실행 파일이 계산으로 찾던 방식) | 디스크를 가져올 때 `KoreanFonts.java` 가 그 폰트에 문자표를 만들어 넣음 |
+| 한글이 엉뚱한 글자로 나옴 | 고해상도 글자(Overpass TTF)가 한국판 코드를 라틴 문자로 그림 | `display.high_res_text` → `display.hires_text_kr`, 기본값 `false` |
 
-### Installation notes
+소스 변경은 이 저장소의 커밋 하나에 모두 들어 있습니다 (`git diff v1.0.41`).
 
-- **Android:** download the flat APK, open it from Downloads, allow the chosen file manager/browser to install apps if prompted, then import your own game image.
-- **Quest:** enable Developer Mode; install the VR APK through SideQuest or ADB (adb install -r), then import your game image.
-- **PICO:** sideload the same universal VR APK through ADB or a compatible utility. This exact build has not been tested on PICO hardware.
-- **Windows flat:** extract the Windows ZIP with its DLLs together, start halo.exe, import your ISO/XISO under GAME DATA and choose PLAY.
-- **Windows PC VR:** configure an **OpenXR runtime (recommended)** such as SteamVR, Quest Link, Virtual Desktop or PICO Connect, then start halo.exe and choose PLAY IN VR.
-- **Steam Frame:** in Desktop Mode download and extract its ZIP in Downloads, run Install HaloCE Quest VR.desktop, then return to Gaming Mode and launch from Steam.
+### 릴리스 APK를 만든 방법
 
-The Test73b candidate passed 203/203 automated suites and its Android/Windows build checks. It was not launched in a game or headset during packaging; device/runtime testing is requested. See the [Test73b field guide](https://github.com/moistman42069/HaloCE-DecompRemix-VR-PC-Android/blob/main/docs/TEST73B-FIELD-GUIDE.md), [controls](https://github.com/moistman42069/HaloCE-DecompRemix-VR-PC-Android/blob/main/docs/CONTROLS-AND-OPTIONS.md), [Android touch guide](https://github.com/moistman42069/HaloCE-DecompRemix-VR-PC-Android/blob/main/docs/ANDROID-TOUCH-CONTROLS.md), and [full release notes](https://github.com/moistman42069/HaloCE-DecompRemix-VR-PC-Android/blob/main/docs/RELEASE-1.0.41.md).
+릴리스 APK는 원작자가 배포한 공식 v1.0.41 APK (SHA-256 `8f7a10dd…` Quest, `b4ffaeec…` Android) 에
+위 변경과 같은 내용을 적용해 만들었습니다: `tools/korean/hc_build.py --korean-maps`
+(엔진 `halo_guest.elf` 의 해당 상수·문자열, 런처 smali, `KoreanFonts` 를 dex로 추가, 재서명).
+같은 변경을 소스로 적용한 것이 이 커밋이며 (`tools/korean/hc_source.py`), 이 소스로 빌드해도 같은 동작입니다.
 
-## Support and project
+## 원본 프로젝트
 
-Please report both failures and successful tests, especially for fist combat/deflection, sliding, ragdolls, campaigns, vehicle options, and co-op. Include device and OS, app and network version, selected game-data set, map/mission, relevant settings, steps to reproduce, and the log of the run it happened in (where each device keeps it, below). For co-op, logs from both players help. Remove private invites/device details before public posting.
+원본 포트의 설명·기능·조작법은 [README.original.md](README.original.md)(영어)를 보세요.
 
-| Device | Each run's log |
-| --- | --- |
-| Quest, PICO, Android | **Download/HaloCE**: `halo_log_<date>_<time>.txt`, the newest the last run, the last ten kept (the game's own `debug.txt` lines are in it). A copy of the last run's: `Android/data/<package>/files/halo_log.txt`. |
-| Steam Frame | **Documents/HaloCEQuestVR/logs** (Desktop Mode's file manager): `halo_log_<date>_<time>.txt`, the last ten kept. Beside that folder: `launcher.log` (each start from Steam), `logcat.txt` (the last run's Android log), `install.log` (the installer's). |
-| Windows | Beside the game: `halo.log` (`halo.exe`) and `halo-vr.log` (`halo-vr.exe`, PC VR), the last run's; the ten runs before each in **logs** (`halo_<date>_<time>.log`, `halo-vr_<date>_<time>.log`). The game's own `debug.txt` is in the game data folder. The PC launcher's **LOGS** page opens these folders. |
+## 라이선스
 
-Contact **@MeWhenINameMyself** by Discord DM, use the [Halo CE Decomp Discord](https://discord.gg/S9uSCKxKx), or report in the [Flat2VR Halo CE discussion](https://discord.com/channels/747967102895390741/1555959498349215774). This build is intended to collect real-device feedback for the next refinement pass.
+원본과 같이 **AGPL-3.0-or-later** ([LICENSE](LICENSE)). 원본의 [CREDITS](CREDITS.md), [THIRD-PARTY-NOTICES](THIRD-PARTY-NOTICES.txt) 를 따릅니다.
+이 라이선스는 Halo 자체(게임, 맵, 상표 등 Microsoft 소유물)에 대한 권리를 주지 않습니다.
+이 수정판으로 다른 사람과 네트워크 게임을 호스팅하는 경우 AGPL 13조에 따라 이 저장소가 그 소스입니다.
 
-The repository/About description now reflects the expanded platform scope. This is an unofficial community project, not affiliated with Microsoft. No Halo game files are distributed. See [credits](CREDITS.md) and [third-party notices](THIRD-PARTY-NOTICES.txt).
+---
 
-## Licence
-
-From Test73 on, this project is free software under the terms of the GNU Affero General Public License, version 3 or (at your option) any later version (`AGPL-3.0-or-later`), without any warranty; the full text is in [LICENSE](LICENSE).
-
-- **Why:** this port merges OpenCE, which moved to the AGPL 3.0 or later with its commit 4b09168e7 (between its Builds 232 and 246), as the decompilation both build on did ([punpckhdq/halo](https://github.com/punpckhdq/halo), from 17 October 2026).
-- **Before the change:** the code from before it, and every release of this project up to Test72 (v1.0.37 included), were released under [CC0 1.0](LICENSES/CC0-1.0.txt) and stay that way.
-- **Source:** each release's source is offered with it (the release's source zip, and its tag).
-- **Hosts and servers:** if you change the game and let other people play your version over a network (as an internet game's host, for example), the AGPL asks you to offer them your version's source (section 13).
-- **Other parts:** third-party code, fonts and art keep their own licences, next to them and in [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt).
-- **Halo is not covered:** the licence covers this project's and its upstreams' work, and gives no rights in Halo, its maps or anything else Microsoft owns.
+**English:** an unofficial fork of HaloCE Decomp Remix v1.0.41 that supports the Korean Xbox disc
+(*Halo - Jeonjaengui Seomak*, maps_kr, cache build 01.12.09.0135) with its Korean voice and text: build
+recognition, a larger tag cache (0x1680000) with the game state moved to 0x81B00000, maps_kr import, character
+tables for the Korean fonts (Hangul code = glyph index + 0xA1) and high-res text off by default. All source
+changes are in one commit on top of v1.0.41. Not affiliated with the original author or Microsoft; no game
+files included. AGPL-3.0-or-later.
