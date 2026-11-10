@@ -119,7 +119,7 @@ unsigned long hud_hires_settings_changed(void)
 
 	if (read_at == config_changes()) return 0;
 	current = (config_boolean("display.high_res_hud") ? 1UL : 0UL) |
-		(config_boolean("display.high_res_text") ? 2UL : 0UL);
+		(config_boolean("display.hires_text_kr") ? 2UL : 0UL);
 	changed = read_at == (unsigned long)-1 ? 0 : previous ^ current;
 	read_at = config_changes();
 	previous = current;
@@ -145,7 +145,7 @@ long hud_hires_override_find(unsigned long address, unsigned long width, unsigne
 	{
 		read_at = config_changes();
 		hud_enabled = config_boolean("display.high_res_hud");
-		titles_enabled = config_boolean("display.high_res_text");
+		titles_enabled = config_boolean("display.hires_text_kr");
 	}
 	if (!hud_enabled && !titles_enabled)
 		return -1;
@@ -211,7 +211,7 @@ int hud_hires_sprites_drawable(long asset, unsigned long address, unsigned long 
 	{
 		read_at = config_changes();
 		hud_enabled = config_boolean("display.high_res_hud");
-		titles_enabled = config_boolean("display.high_res_text");
+		titles_enabled = config_boolean("display.hires_text_kr");
 	}
 	if (asset < 0 || asset >= hud_hires_asset_count() || !hud_hires_embedded[asset].sprites ||
 		!(hud_hires_embedded[asset].title ? titles_enabled : hud_enabled))

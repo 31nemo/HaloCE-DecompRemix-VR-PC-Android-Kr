@@ -971,7 +971,7 @@ static struct
 {
 	{ "01.01.14.2342", "PAL" },
 	{ "01.10.12.2276", "NTSC" },
-	{ "01.08.15.1749", "NTSC" },
+	{ "01.12.09.0135", "NTSC" }, /* (Korean patch) */
 };
 
 /* the region of a build's maps ("PAL" or "NTSC") if it is listed above, else

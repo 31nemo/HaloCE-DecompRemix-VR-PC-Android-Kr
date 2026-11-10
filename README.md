@@ -4,6 +4,8 @@
 
 <p align="center">An unofficial OpenCE-based community port for Meta Quest, PICO and Steam Frame VR, Windows flat PC and PC VR, and flat Android phones and tablets.</p>
 
+> **이 저장소는 한국판 디스크(헤일로: 전쟁의 서막) 지원판입니다 — [KOREAN.md](KOREAN.md).** Unofficial fork of v1.0.41 adding support for the Korean Xbox disc; see KOREAN.md. Not the original project.
+
 **Latest: [1.0.41 — Test73b Multi-Platform Release](https://github.com/moistman42069/HaloCE-DecompRemix-VR-PC-Android/releases/tag/v1.0.41).** This is a large cumulative update from 1.0.37. Read the install and WIP notes before playing.
 
 > **Experimental / WIP:** fist combat and projectile deflection, sliding, parkour, physical reload, ragdolls and body interactions, immersive vehicle controls, and broad support for user-supplied mods still need refinement and device reports. Enable experimental options one at a time. Project Lumoria and SPV1 have specific setup paths; this does not mean every mod works. MCC maps and The Altheros Experience remain experimental.

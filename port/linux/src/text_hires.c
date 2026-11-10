@@ -91,7 +91,7 @@ int text_hires_enabled(void)
 	if (read_at != config_changes())
 	{
 		read_at = config_changes();
-		enabled = config_boolean("display.high_res_text");
+		enabled = config_boolean("display.hires_text_kr");
 	}
 	return enabled;
 }

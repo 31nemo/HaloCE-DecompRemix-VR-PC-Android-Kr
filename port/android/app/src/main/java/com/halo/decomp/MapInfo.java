@@ -14,7 +14,7 @@ final class MapInfo {
     private MapInfo(String build,int version,int type,String problem) {
         this.build=build; this.version=version; this.type=type; this.problem=problem;
         region=build.equals("01.01.14.2342")?"PAL":
-            build.equals("01.10.12.2276")||build.equals("01.08.15.1749")?"NTSC":"unknown";
+            build.equals("01.12.09.0135")||build.equals("01.10.12.2276")||build.equals("01.08.15.1749")?"NTSC":"unknown";
         multiplayer=problem.isEmpty()&&version==5&&type==1&&!region.equals("unknown");
     }
     static MapInfo read(File file) {

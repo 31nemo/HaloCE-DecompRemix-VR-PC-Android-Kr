@@ -162,7 +162,17 @@ final class XisoExtractor {
                 xbe = entry;
         }
         List<Entry> directories = walkTable(root, true);
+        /* (Korean patch) the Korean disc ("Halo - Jeonjaengui Seomak") has maps (English) and maps_kr
+        (Korean voice and text): take maps_kr */
         for (Entry entry : directories) {
+            if (entry.name.equalsIgnoreCase("maps_kr")) {
+                maps = entry;
+                break;
+            }
+        }
+        for (Entry entry : directories) {
+            if (maps != null)
+                break;
             if (entry.name.equalsIgnoreCase("maps")) {
                 maps = entry;
                 break;
@@ -250,6 +260,8 @@ final class XisoExtractor {
                 throw new ExtractException("Could not move " + file.name + " into " + mapsFolder.getPath() + ".");
         }
         partial.delete();
+        /* (Korean patch) the Korean maps' fonts need character tables (KoreanFonts.java) */
+        KoreanFonts.fixMaps(destination, progress);
     }
 
     /** (port) the import cancelled: its thread interrupted (the launcher's Cancel) */
